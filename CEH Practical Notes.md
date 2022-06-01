@@ -1,6 +1,8 @@
 
 # Certified Ethical Hacker (Practical) Notes - JupiterAlien
 
+# Disclaimer: The information here stated is only for educational purposes. Do not use this for other purposes rather than education!
+
 ## Sudo overview
 
 sudo --> run commands with elevated privileges
@@ -156,11 +158,11 @@ What this script is doing is: for the stated sequence, go through 1 to 254, ping
 
 ./ipsweep --> that's how I can run the script
 
-#!/bin/bash
+	#!/bin/bash
 
-for ip in `seq 1 254`; do
-ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr ":" &
-done
+	for ip in `seq 1 254`; do
+	ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr ":" &
+	done
 
 By changing the IP for $1, this means that it will run the argument 1. This script will walk through the network listing the IPs that responded to the ping. 
 
@@ -169,18 +171,18 @@ chmod +x ipsweep.sh --> add execution privilege the current owner user of the sp
 
 An improved version of the previous script will be: 
 
-#!/bin/bash
+	#!/bin/bash
 
-if [ "$1" == ""]
-then
-echo "You forgot an IP address"
-echo "Syntax: ./ipsweep.sh IP.address.here"
+	if [ "$1" == ""]
+	then
+	echo "You forgot an IP address"
+	echo "Syntax: ./ipsweep.sh IP.address.here"
 
-else
-for ip in `seq 1 254`; do
-ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr ":" &
-done
-fi
+	else
+	for ip in `seq 1 254`; do
+	ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr ":" &
+	done
+	fi
 
 This will help me to handle errors in some fashion.
 
@@ -190,56 +192,56 @@ So I can use this script to gather all the IP addresses on the network and store
 
 One line script to have nmap checking the IPs I've gathered
 
-for ip in $(cat ipsfound.txt); do nmap $ip & done
+	for ip in $(cat ipsfound.txt); do nmap $ip & done
 
 ## Python scripting
 
-**How to create a basic port scanner
+**How to create a basic port scanner**
 
-gedit portscanner.py&
+	gedit portscanner.py&
 
 Once the text editor is up:
 
-#!/bin/python3
+	#!/bin/python3
 
-import sys
-import socket
-from datetime import datetime
+	import sys
+	import socket
+	from datetime import datetime
 
-if len(sys.argv) == 2:
+	if len(sys.argv) == 2:
 
-	target = socket.gethostbyname(sys.argv[1]) ## This translates hostname to IPv4
-else:
+		target = socket.gethostbyname(sys.argv[1]) ## This translates hostname to IPv4
+	else:
 
-	print("Invalid amount of arguments.")
-	print("Syntax: python3 portscanner.py <ip>")
+		print("Invalid amount of arguments.")
+		print("Syntax: python3 portscanner.py <ip>")
 
-print("-" * 50) 
-print("Scanning target " + target)
-print("Time started: " + str(datetime(now)))
-print("-" * 50) 
+	print("-" * 50) 
+	print("Scanning target " + target)
+	print("Time started: " + str(datetime(now)))
+	print("-" * 50) 
 
-try: 
+	try: 
 
-	for port in range(50,85):
-		s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-		socket.setdefaulttimeout(1) ## this sets the timeout range so that we don't wait forever
-		result = s.connect_ex((target,port)) ## returns an error indicator
-		if result == 0:
-			print("Port {} is open".format(port))
-		s.close
+		for port in range(50,85):
+			s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+			socket.setdefaulttimeout(1) ## this sets the timeout range so that we don't wait forever
+			result = s.connect_ex((target,port)) ## returns an error indicator
+			if result == 0:
+				print("Port {} is open".format(port))
+			s.close
 		
-except KeyboardInterrupt:
-	print("\nExiting program".)
-	sys.exit()
+	except KeyboardInterrupt:
+		print("\nExiting program".)
+		sys.exit()
 	
-except socket.gaierror:
-	print("Hostname couldn't be resolved.")
-	sys.exit()
+	except socket.gaierror:
+		print("Hostname couldn't be resolved.")
+		sys.exit()
 	
-except socket.error:
-	print("Couldn't connect to server.")
-	sys.exit()
+	except socket.error:
+		print("Couldn't connect to server.")
+		sys.exit()
 
 
 ## Ethical Hacker Methodology
