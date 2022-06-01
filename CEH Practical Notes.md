@@ -111,8 +111,8 @@ cat filename.txt --> reads and displays the information on the file.
 
 useful example:  
 
-echo "192.168.1.10" > ipsgathered.txt
-echo "10.10.5.1" >> ipsgathered.txt
+	echo "192.168.1.10" > ipsgathered.txt
+	echo "10.10.5.1" >> ipsgathered.txt
 
 touch newfile.txt --> another way to create a file
 nano thisisanewfile.txt --> creates and edit a new file using nano
@@ -120,7 +120,8 @@ nano thisisanewfile.txt --> creates and edit a new file using nano
 The usage of gedit make things easier when editiing files due to its GUI. 
 
 grep --> utilized to extract specific string portions on a file. 
-cat ip.txt | grep "64 bytes"
+
+	cat ip.txt | grep "64 bytes"
 
 cut --> cuts out something from a file
 cut -d --> is a delimiter
@@ -148,11 +149,11 @@ Once done declaring this, I can paste cat ip.txt | grep "64 bytes" | cut -d " " 
 
 So the script will look like this: 
 
-#!/bin/bash
+	#!/bin/bash
 
-for ip in `seq 1 254`; do
-ping -c 1 192.168.25.$ip | grep "64 bytes" | cut -d " " -f 4 | tr ":" &
-done
+	for ip in `seq 1 254`; do
+	ping -c 1 192.168.25.$ip | grep "64 bytes" | cut -d " " -f 4 | tr ":" &
+	done
 
 What this script is doing is: for the stated sequence, go through 1 to 254, pinging or sending just one package, then narrow down the information, provide the value on field 4 and finally remove the ":". Also this is making a counn of the pinged IPs leveraging $ip. 
 
