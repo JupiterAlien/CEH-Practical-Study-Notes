@@ -1,4 +1,4 @@
-# CEH-Practical-Study-Notes
+# CEH-Practical
 
 ## Disclaimer:
 
