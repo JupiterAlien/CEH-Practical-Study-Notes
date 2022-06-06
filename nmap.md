@@ -1,4 +1,5 @@
 # NMAP
+## The "raw" view will give you a better output of this content. 
 
 Sintax: nmap [Scan Type(s)] [Options] {target specification}
 
