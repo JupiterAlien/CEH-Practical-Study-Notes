@@ -5,41 +5,40 @@
 
 ## Sudo overview
 
-sudo --> run commands with elevated privileges
-sudo cat /etc/shadow --> reading as root the elements on this directory
+	sudo --> run commands with elevated privileges
+	sudo cat /etc/shadow --> reading as root the elements on this directory
 
-sudo su - --> change your current user to root user (careful here).
+	sudo su - --> change your current user to root user (careful here).
 
 ## Navigating the file system
 
-pwd (present working directory) --> shows/prints in which folder you are
-cd (change directory)  --> move between directories
-cd /folderx/foldery 
-cd .. --> move backwards
-cd ~/FolderHere --> move to an specified folder without being in the parent directory
-ls --> list items in a folder
-ls -a --> list all items, even the hidden ones
-ls -la --> list items with full details of them
-mkdir --> create a folder
-rmdir --> remove a folder
-cp --> copy files 
-cp [filenamehere] [destinationfolderhere]
-rm Folder/File.ext --> remove an specific file in an specific folder
-mv --> move files
-locate --> locate a file within the system
-updatedb --> updates everything for us, builds a database so that we can use locate with better results. 
-man --> instructions/options/help on the commands used on the terminal
-man [commandhere]
-another option is [commandhere] --help
+	pwd (present working directory) --> shows/prints in which folder you are
+	cd (change directory)  --> move between directories
+	cd /folderx/foldery 
+	cd .. --> move backwards
+	cd ~/FolderHere --> move to an specified folder without being in the parent directory
+	ls --> list items in a folder
+	ls -a --> list all items, even the hidden ones
+	ls -la --> list items with full details of them
+	mkdir --> create a folder
+	rmdir --> remove a folder
+	cp --> copy files 
+	cp [filenamehere] [destinationfolderhere]
+	rm Folder/File.ext --> remove an specific file in an specific folder
+	mv --> move files
+	locate --> locate a file within the system
+	updatedb --> updates everything for us, builds a database so that we can use locate with better results. 
+	man --> instructions/options/help on the commands used on the terminal
+	man [commandhere]
+	another option is [commandhere] --help
 
 ## Users and privileges
 
-passwd --> changes the current user's password
-adduser --> adds a new user
-su [usernamehere] --> change between users
-su root --> change to root user
-
-![[ls -la.png]]
+	passwd --> changes the current user's password
+	adduser --> adds a new user
+	su [usernamehere] --> change between users
+	su root --> change to root user
+	
 
 If there's a " - " at the beginning of the line, that means it is a file. 
 If there's a " D " at the beginning of the line, that means it is a directory.
@@ -64,86 +63,87 @@ The third group are all other users, and in this case, they just have read-execu
 During penetration testing, we'll always look for full permissions. 
 
 We can see these details by running ls -la and specify the folder. 
-ls -la /tmp/
 
-chmod --> change mode or change the permissions.
-chmod 777 [fileorfolderhere] --> changed the permissions to rwx.
+	ls -la /tmp/
+
+	chmod --> change mode or change the permissions.
+	chmod 777 [fileorfolderhere] --> changed the permissions to rwx.
 
 ## Common Network Commands
 
-ifconfig --> displays all the interfaces types information.
-iwconfig --> displays wireless interfaces information.
+	ifconfig --> displays all the interfaces types information.
+	iwconfig --> displays wireless interfaces information.
 
-arp -a --> shows IP addresses and its associated MAC address.
+	arp -a --> shows IP addresses and its associated MAC address.
 
-netstat -ano --> shows the active connections on the host.
+	netstat -ano --> shows the active connections on the host.
 
-route --> prints the routing table
+	route --> prints the routing table
 
-ip a --> displays the interfaces information, the updated version of ifconfig.
-ip n --> displays the arp table, the updated version of arp -a.
-ip r --> displays the routing table, the updated version of route.
+	ip a --> displays the interfaces information, the updated version of ifconfig.
+	ip n --> displays the arp table, the updated version of arp -a.
+	ip r --> displays the routing table, the updated version of route.
 
 ## Installing and updating tools
 
-apt install [toolname] --> installs the desired tool.
-apt update && apt upgrade --> updates/upgrades the current version of the distro, install the new packages. 
+	apt install [toolname] --> installs the desired tool.
+	apt update && apt upgrade --> updates/upgrades the current version of the distro, install the new packages. 
 
-apt install python-pip --> installs the Python package manager or modules, a python interpreter if you like. 
+	apt install python-pip --> installs the Python package manager or modules, a python interpreter if you like. 
 
 Pimp my kali by Dewalt, this script fixes common issues with Kali. Also helps to downgrade tools' versions.
 
 A good practice when installing tools, is to install them into /opt.
 
-git clone [githubURLhere] --> installs tools from Github.
+	git clone [githubURLhere] --> installs tools from Github.
 
-./scriptname --> command to run a shell script.
+	./scriptname --> command to run a shell script.
 
-apt install gedit --> installs another text editor.
+	apt install gedit --> installs another text editor.
 
 
 ## Viewing, creating and editing files
 
-echo "whatever you want here" > filename.txt --> this creates a txt file with the string you stated between quotes.
-echo "info here" >> filename.txt --> this makes an append to the existing file. 
+	echo "whatever you want here" > filename.txt --> this creates a txt file with the string you stated between quotes.
+	echo "info here" >> filename.txt --> this makes an append to the existing file. 
 
-cat filename.txt --> reads and displays the information on the file. 
+	cat filename.txt --> reads and displays the information on the file. 
 
 useful example:  
 
 	echo "192.168.1.10" > ipsgathered.txt
 	echo "10.10.5.1" >> ipsgathered.txt
 
-touch newfile.txt --> another way to create a file
-nano thisisanewfile.txt --> creates and edit a new file using nano
+	touch newfile.txt --> another way to create a file
+	nano thisisanewfile.txt --> creates and edit a new file using nano
 
 The usage of gedit make things easier when editiing files due to its GUI. 
 
-grep --> utilized to extract specific string portions on a file. 
+	grep --> utilized to extract specific string portions on a file. 
 
 	cat ip.txt | grep "64 bytes"
 
-cut --> cuts out something from a file
-cut -d --> is a delimiter
-cut -d -f --> -f is a switch for field
+	cut --> cuts out something from a file
+	cut -d --> is a delimiter
+	cut -d -f --> -f is a switch for field
 
-cat ip.txt | grep "64 bytes" | cut -d " " -f 4 --> on this example I'm setting a space as a delimiter and counting to 4 to obtain what's in that field
+	cat ip.txt | grep "64 bytes" | cut -d " " -f 4 --> on this example I'm setting a space as a delimiter and counting to 4 to obtain what's in that field
 
-tr --> translate, useful to remove noisy values
-tr -d ":" --> on this case, we are using tr as a "replace/remove" function, eliminating the : on the string
-cat ip.txt | grep "64 bytes" | cut -d " " -f 4 | tr -d ":"
+	tr --> translate, useful to remove noisy values
+	tr -d ":" --> on this case, we are using tr as a "replace/remove" function, eliminating the : on the string
+	cat ip.txt | grep "64 bytes" | cut -d " " -f 4 | tr -d ":"
 
 ## Scripting with bash
 
-ping x.x.x.x -c 1 --> send just one package, I can play around with the count (-c) number.
+	ping x.x.x.x -c 1 --> send just one package, I can play around with the count (-c) number.
 
-ping x.x.x.x -c 2 > ping.txt --> stores the result of that ping in a txt file. 
+	ping x.x.x.x -c 2 > ping.txt --> stores the result of that ping in a txt file. 
 
-mousepad --> another text editor, useful to create scripts. 
+	mousepad --> another text editor, useful to create scripts. 
 
-mousepad ipsweep.sh --> creates a script file and opens the text editor. 
+	mousepad ipsweep.sh --> creates a script file and opens the text editor. 
 
-#!/bin/bash --> use this at the beggining to declare that this is a shell script and it will be ran from there. 
+	#!/bin/bash --> use this at the beggining to declare that this is a shell script and it will be ran from there. 
 
 Once done declaring this, I can paste cat ip.txt | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" through the text editor to create a script with these commands. 
 
@@ -157,7 +157,7 @@ So the script will look like this:
 
 What this script is doing is: for the stated sequence, go through 1 to 254, pinging or sending just one package, then narrow down the information, provide the value on field 4 and finally remove the ":". Also this is making a counn of the pinged IPs leveraging $ip. 
 
-./ipsweep --> that's how I can run the script
+	./ipsweep --> that's how I can run the script
 
 	#!/bin/bash
 
@@ -189,7 +189,7 @@ This will help me to handle errors in some fashion.
 
 So I can use this script to gather all the IP addresses on the network and store them in a txt file
 
-./ipsweep.sh 192.168.25 > ipsfound.txt
+	./ipsweep.sh 192.168.25 > ipsfound.txt
 
 One line script to have nmap checking the IPs I've gathered
 
