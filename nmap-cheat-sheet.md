@@ -5,7 +5,7 @@
 ### Port Specification Switches
 
 
-Switch       | Example                | Description
+Switch          | Example                | Description
 --------------- | ---------------------- | ------------
 -P  | nmap -p 23 192.168.1.1 | Port scanning for an specific port
 -P  | nmap -p 23-100 192.168.1.1 | Port scanning for an specific range of ports 
