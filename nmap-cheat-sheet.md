@@ -2,6 +2,7 @@
 
 ## Useful switches for nmap during reconnaissance. 
 
+
 ### Port Specification Switches
 
 
@@ -16,6 +17,21 @@ Switch          | Example                | Description
 –top-ports  | nmap 192.168.1.1 –top-ports 2000	| Port scan the top X ports stated by the user
 -p-65535  | nmap 192.168.1.1 -p-65535	| Leaving off initial port in range makes the scan start at port 1
 -p0-	 | nmap 192.168.1.1 -p0-	| Leaving off end port in range makes the scan go through to port 65535
+
+
+
+
+### Switches for timing and performance
+
+Switch          | Example	               | Description
+--------------- | ---------------------- | ------------
+-T0 | nmap 192.168.1.1 -T0	| Paranoid (0) Intrusion Detection System evasion
+-T1	| nmap 192.168.1.1 -T1	| Sneaky (1) Intrusion Detection System evasion
+-T2	| nmap 192.168.1.1 -T2	| Polite (2) slows down the scan to use less bandwidth and use less target machine resources
+-T3	| nmap 192.168.1.1 -T3	| Normal (3) which is default speed
+-T4	| nmap 192.168.1.1 -T4	| Aggressive (4) speeds scans; assumes you are on a reasonably fast and reliable network
+-T5	| nmap 192.168.1.1 -T5	| Insane (5) speeds scan; assumes you are on an extraordinarily fast network
+
 
 
 
@@ -37,6 +53,8 @@ Switch          | Example	               | Description
 -sL | nmap -sL 192.168.1.1  | Simply list targets to scan
 
 
+
+
 ### Switches for version and service detection
 
 
@@ -47,6 +65,8 @@ Switch          | Example	               | Description
 -sV –version-light	| nmap 192.168.1.1 -sV –version-light	| Enable light mode. Lower possibility of correctness. Faster
 -sV –version-all	| nmap 192.168.1.1 -sV –version-all	| Enable intensity level 9. Higher possibility of correctness. Slower
 -A	| nmap 192.168.1.1 -A	| Enables OS detection, version detection, script scanning, and traceroute
+
+
 
 
 ### Switches for Operating System detection
