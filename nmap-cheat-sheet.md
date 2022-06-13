@@ -4,6 +4,7 @@
 
 #### Port Specification Switches
 
+
 Switch       | Example                | Description
 --------------- | ---------------------- | ------------
 -P  | nmap -p 23 192.168.1.10 | Port scanning for an specific port
@@ -17,7 +18,9 @@ Switch       | Example                | Description
 -p0-	 | nmap 192.168.1.1 -p0-	| Leaving off end port in range makes the scan go through to port 65535
 
 
+
 ### Switches for the different techniques
+
 
 Switch          | Example	               | Description
 --------------- | ---------------------- | ------------
