@@ -7,10 +7,10 @@
 
 Switch       | Example                | Description
 --------------- | ---------------------- | ------------
--P  | nmap -p 23 192.168.1.10 | Port scanning for an specific port
--P  | nmap -p 23-100 192.168.1.10 | Port scanning for an specific range of ports 
--p  | nmap -U:110,T:443 192.168.1.10 | Scanning different port types by UDP (U) or TCP (T)
--p-  | nmap -p- 192.168.1.10 | Port scanning for all ports, it takes too much time, you may need another switch, like -T5 ot -T4
+-P  | nmap -p 23 192.168.1.1 | Port scanning for an specific port
+-P  | nmap -p 23-100 192.168.1.1 | Port scanning for an specific range of ports 
+-p  | nmap -U:110,T:443 192.168.1.1 | Scanning different port types by UDP (U) or TCP (T)
+-p-  | nmap -p- 192.168.1.1 | Port scanning for all ports, it takes too much time, you may need another switch, like -T5 ot -T4
 -p	 | nmap 192.168.1.1 -p http,https	| Port scan from service name
 -F  | nmap 192.168.1.1 -F	| Fast port scan (100 ports)
 –top-ports  | nmap 192.168.1.1 –top-ports 2000	| Port scan the top X ports stated by the user
@@ -43,6 +43,16 @@ Switch          | Example	               | Description
 -sV –version-all	| nmap 192.168.1.1 -sV –version-all	| Enable intensity level 9. Higher possibility of correctness. Slower
 -A	| nmap 192.168.1.1 -A	| Enables OS detection, version detection, script scanning, and traceroute
 
+
+#### Switches for Operating System detection
+
+Switch          | Example	               | Description
+--------------- | ---------------------- | ------------
+-O	| nmap 192.168.1.1 -O	| Remote OS detection using TCP/IP stack fingerprinting
+-O –osscan-limit	| nmap 192.168.1.1 -O –osscan-limit	| If at least one open and one closed TCP port are not found it will not try OS detection against host
+-O –osscan-guess	| nmap 192.168.1.1 -O –osscan-guess	| Makes Nmap guess more aggressively
+-O –max-os-tries	| nmap 192.168.1.1 -O –max-os-tries 1	| Set the maximum number x of OS detection tries against a target
+-A	| nmap 192.168.1.1 -A	| Enables OS detection, version detection, script scanning, and traceroute
 
 
 
