@@ -2,7 +2,7 @@
 
 ## Useful switches for nmap during reconnaissance. 
 
-#### Port Specification Switches
+### Port Specification Switches
 
 
 Switch       | Example                | Description
@@ -32,7 +32,7 @@ Switch          | Example	               | Description
 -sM	| nmap 192.168.1.1 -sM	| TCP Maimon port scan
 
 
-#### Switches for version and service detection
+### Switches for version and service detection
 
 
 Switch          | Example	               | Description
@@ -44,7 +44,7 @@ Switch          | Example	               | Description
 -A	| nmap 192.168.1.1 -A	| Enables OS detection, version detection, script scanning, and traceroute
 
 
-#### Switches for Operating System detection
+### Switches for Operating System detection
 
 Switch          | Example	               | Description
 --------------- | ---------------------- | ------------
