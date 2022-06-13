@@ -19,7 +19,7 @@ Switch       | Example                | Description
 
 
 
-### Switches for the different techniques
+### Switches for the different techniques/types
 
 
 Switch          | Example	               | Description
@@ -30,6 +30,11 @@ Switch          | Example	               | Description
 -sA	| nmap 192.168.1.1 -sA	| TCP ACK port scan
 -sW	| nmap 192.168.1.1 -sW	| TCP Window port scan
 -sM	| nmap 192.168.1.1 -sM	| TCP Maimon port scan
+-Sf | nmap -Sf 192.168.1.1  | TCP FIN scan, sets just the TCP FIN bit.
+-sX | nmap -sX 192.168.1.1  | XMAS scan, sets the FIN, PSH, and URG flags, lighting the packet up like a Christmas tree.
+-sN | nmap -sN 192.168.1.1  | TCP null scan, des not set any bits (TCP flag header is 0)
+-sP | nmap -sP 192.168.1.1. | Ping scans the network, listing machines that respond to ping. You can use /mask
+-sL | nmap -sL 192.168.1.1  | Simply list targets to scan
 
 
 ### Switches for version and service detection
