@@ -4,7 +4,7 @@
 
 #### Port Specification Switches
 
-Syntax          | Example                | Description
+Switch       | Example                | Description
 --------------- | ---------------------- | ------------
 -P  | nmap -p 23 192.168.1.10 | Port scanning for an specific port
 -P  | nmap -p 23-100 192.168.1.10 | Port scanning for an specific range of ports 
@@ -15,3 +15,15 @@ Syntax          | Example                | Description
 –top-ports  | nmap 192.168.1.1 –top-ports 2000	| Port scan the top X ports stated by the user
 -p-65535  | nmap 192.168.1.1 -p-65535	| Leaving off initial port in range makes the scan start at port 1
 -p0-	 | nmap 192.168.1.1 -p0-	| Leaving off end port in range makes the scan go through to port 65535
+
+
+### Switches for the different techniques
+
+Switch          | Example	               | Description
+--------------- | ---------------------- | ------------
+-sS	| nmap 192.168.1.1 -sS	| TCP SYN port scan (Default)
+-sT	| nmap 192.168.1.1 -sT	| TCP connect port scan (Default without root privilege)
+-sU	| nmap 192.168.1.1 -sU	| UDP port scan
+-sA	| nmap 192.168.1.1 -sA	| TCP ACK port scan
+-sW	| nmap 192.168.1.1 -sW	| TCP Window port scan
+-sM	| nmap 192.168.1.1 -sM	| TCP Maimon port scan
