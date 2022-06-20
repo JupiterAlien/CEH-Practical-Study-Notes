@@ -1,6 +1,6 @@
 # Google Dork(s) is an advanced search operator option used to identify and find specific information or values within a website.
 
-### These are the most common that combined can provide you with amazing results. 
+### These are the most common ones, that combined, can provide you with amazing results. 
 
 Syntax          | Description              | Example
 --------------- | ------------------------ | ------------
