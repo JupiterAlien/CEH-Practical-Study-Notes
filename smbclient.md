@@ -1,6 +1,9 @@
 # The smbclient is a client that is part of the Samba software suite. It communicates with a LAN Manager server, offering an interface similar to that of the ftp program. 
-# Operations include things like getting files from the server to the local machine, putting files from the local machine to the server, retrieving directory information from the server and so on.
+
+## Operations include things like getting files from the server to the local machine, putting files from the local machine to the server, retrieving directory information from the server and so on.
+
 ## Here's a list of the most common commands
+
 
 List shares on a machine using NULL Session
 
