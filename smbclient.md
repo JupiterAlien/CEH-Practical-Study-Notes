@@ -8,6 +8,10 @@
 List shares on a machine using NULL Session
 
     smbclient -L <target-IP>
+
+List shares with no password
+
+    smbclient -N -L <target-IP>
   
 List shares on a machine using a valid username + password
 
