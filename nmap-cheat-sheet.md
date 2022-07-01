@@ -2,6 +2,10 @@
 
 ## Useful switches for nmap during reconnaissance. 
 
+This one here is quite effective, it scans all the open ports (-p- --open) using a SYN scan, and its just sends 5000 packets per second, it leverages the triple verbose switch to display the ports found in the console during the scan, and it doesn't wait for the DNS resolution. And the output comes in a grepable format.
+
+    nmap -p- --open -sS --min-rate 5000 -vvv -Pn <TARGET-IP> -oG
+
 
 ### Port Specification Switches
 
