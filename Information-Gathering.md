@@ -37,3 +37,9 @@ HaveIBeenPwned |
 Breach-Parse |
 WeLeakInfo |
 
+#### Email domains and/or patterns
+
+Tool | Resource
+-----|---------
+Hunter.io |
+
