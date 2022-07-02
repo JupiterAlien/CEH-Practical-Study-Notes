@@ -133,8 +133,7 @@ Port # / Layer  |  Name                  |  Comment
 18 |	msp |	Message Send Protocol
 19 |	chargen |	Character Generation service; sends endless stream of characters
 20 |	ftp-data |	FTP data port
-21 |	ftp |	File Transfer Protocol (FTP) port; sometimes used by File
-Service Protocol (FSP)
+21 |	ftp |	File Transfer Protocol (FTP) port; sometimes used by File Service Protocol (FSP)
 22 |	ssh |	Secure Shell (SSH) service
 23 |	telnet |	The Telnet service
 25 |	smtp |	Simple Mail Transfer Protocol (SMTP)
@@ -142,15 +141,12 @@ Service Protocol (FSP)
 39 |	rlp |	Resource Location Protocol
 42 |	nameserver |	Internet Name Service
 43 |	nicname |	WHOIS directory service
-49 |	tacacs |	Terminal Access Controller Access Control System for TCP/IP
-based authentication and access
+49 |	tacacs |	Terminal Access Controller Access Control System for TCP/IP based authentication and access
 50 |	re-mail-ck |	Remote Mail Checking Protocol
 53 |	domain |	domain name services (such as BIND)
 63 |	whois++ |	WHOIS++, extended WHOIS services
-67 |	bootps |	Bootstrap Protocol (BOOTP) services; also used by Dynamic
-Host Configuration Protocol (DHCP) services
-68 |	bootpc |	Bootstrap (BOOTP) client; also used by Dynamic Host Control
-Protocol (DHCP) clients
+67 |	bootps |	Bootstrap Protocol (BOOTP) services; also used by Dynamic Host Configuration Protocol (DHCP) services
+68 |	bootpc |	Bootstrap (BOOTP) client; also used by Dynamic Host Control Protocol (DHCP) clients
 69 |	tftp |	Trivial File Transfer Protocol (TFTP)
 70 |	gopher |	Gopher Internet document search and retrieval
 71 |	netrjs-1 |	Remote Job Service
@@ -167,13 +163,11 @@ Protocol (DHCP) clients
 107 |	rtelnet |	Remote Telnet
 109 |	pop2 |	Post Office Protocol version 2
 110 |	pop3 |	Post Office Protocol version 3
-111 |	sunrpc |	Remote Procedure Call (RPC) Protocol for remote command
-execution, used by Network Filesystem (NFS)
+111 |	sunrpc |	Remote Procedure Call (RPC) Protocol for remote command execution, used by Network Filesystem (NFS)
 113 |	auth |	Authentication and Ident protocols
 115 |	sftp |	Secure File Transfer Protocol (SFTP) services
 117 |	uucp-path |	Unix-to-Unix Copy Protocol (UUCP) Path services
-119 |	nntp |	Network News Transfer Protocol (NNTP) for the USENET
-discussion system
+119 |	nntp |	Network News Transfer Protocol (NNTP) for the USENET discussion system
 123 |	ntp |	Network Time Protocol (NTP)
 137 |	netbios-ns |	NETBIOS Name Service used in Red Hat Enterprise Linux by Samba
 138 |	netbios-dgm |	NETBIOS Datagram Service used in Red Hat Enterprise Linux by Samba
@@ -196,8 +190,7 @@ discussion system
 206 |	at-zis |	AppleTalk zone information
 209 |	qmtp |	Quick Mail Transfer Protocol (QMTP)
 210 |	z39.50 |	NISO Z39.50 database
-213 |	ipx |	Internetwork Packet Exchange (IPX), a datagram protocol commonly
-used in Novell Netware environments
+213 |	ipx |	Internetwork Packet Exchange (IPX), a datagram protocol commonly used in Novell Netware environments
 220 |	imap3 |	Internet Message Access Protocol version 3
 245 |	link |	LINK / 3-DNS iQuery service
 347 |	fatserv |	FATMEN file and tape management server
@@ -216,8 +209,7 @@ used in Novell Netware environments
 468 |	photuris |	Photuris session key management protocol
 487 |	saft |	Simple Asynchronous File Transfer (SAFT) protocol
 488 |	gss-http |	Generic Security Services (GSS) for HTTP
-496 |	pim-rp-disc |	Rendezvous Point Discovery (RP-DISC) for Protocol Independent
-Multicast (PIM) services
+496 |	pim-rp-disc |	Rendezvous Point Discovery (RP-DISC) for Protocol Independent Multicast (PIM) services
 500 |	isakmp |	Internet Security Association and Key Management Protocol (ISAKMP)
 535 |	iiop |	Internet Inter-Orb Protocol (IIOP)
 538 |	gdomap |	GNUstep Distributed Objects Mapper (GDOMAP)
@@ -227,14 +219,11 @@ Multicast (PIM) services
 563 |	nntps |	Network News Transport Protocol over Secure Sockets Layer (NNTPS)
 565 |	whoami |	whoami user ID listing
 587 |	submission |	Mail Message Submission Agent (MSA)
-610 |	npmp-local |	Network Peripheral Management Protocol (NPMP) local /
-Distributed Queueing System (DQS)
-611 |	npmp-gui |	Network Peripheral Management Protocol (NPMP) GUI /
-Distributed Queueing System (DQS)
+610 |	npmp-local |	Network Peripheral Management Protocol (NPMP) local / Distributed Queueing System (DQS)
+611 |	npmp-gui |	Network Peripheral Management Protocol (NPMP) GUI / Distributed Queueing System (DQS)
 612 |	hmmp-ind |	HyperMedia Management Protocol (HMMP) Indication / DQS
 631 |	ipp |	Internet Printing Protocol (IPP)
-636 |	ldaps |	Lightweight Directory Access Protocol over Secure Sockets
-Layer (LDAPS)
+636 |	ldaps |	Lightweight Directory Access Protocol over Secure Sockets Layer (LDAPS)
 674 |	acap |	Application Configuration Access Protocol (ACAP)
 694 |	ha-cluster |	Heartbeat services for High-Availability Clusters
 749 |	kerberos-adm |	Kerberos version 5 (v5) ‘kadmin’ database administration
