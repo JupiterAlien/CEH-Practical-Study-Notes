@@ -99,7 +99,8 @@ Switch          | Example	               | Description
 -g	| nmap -g 53 192.168.1.1	| Use given source port number
 –proxies	| nmap –proxies http://192.168.1.1:8080, http://192.168.1.2:8080 192.168.1.1	| Relay connections through HTTP/SOCKS4 proxies
 –data-length	| nmap –data-length 200 192.168.1.1	| Appends random data to sent packets
-
+--scan-delay <time>ms | nmap --scan-delay <1000>ms | Used to add a delay between packets sent. This is very useful if the network is unstable, but also for evading any time-based firewall/IDS triggers which may be in place.
+--badsum | nmap --badsum 192.168.1.1 | This one is used to generate an invalid checksum for packets
 
 ### Switches for outputs
 
