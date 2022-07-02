@@ -120,6 +120,8 @@ Switch          | Example	               | Description
 
 
 ## Well-knwon ports list
+Port numbers range from 0 to 65535, but only port numbers 0 to 1023 are reserved for privileged services and designated as well-known ports. 
+Here's the list: 
 
 Port # / Layer  |  Name                  |  Comment
 --------------- | ---------------------- | ------------
