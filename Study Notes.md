@@ -197,7 +197,8 @@ One line script to have nmap checking the IPs I've gathered
 
 ## Python scripting
 
-**How to create a basic port scanner**
+**How to create a basic port scanner.**
+**This script was created and shared by Heath Adams - The Cyber Mentor, all credit goes to him**
 
 	gedit portscanner.py&
 
