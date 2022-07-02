@@ -28,3 +28,12 @@ Wappalyzer |
 WhatWeb |
 BUiltWith |
 Netcat |
+
+#### Data breaches
+
+Tool | Resource
+-----|---------
+HaveIBeenPwned |
+Breach-Parse |
+WeLeakInfo |
+
