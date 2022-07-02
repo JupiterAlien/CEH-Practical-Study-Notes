@@ -90,6 +90,7 @@ Switch          | Example	               | Description
 
 Switch          | Example	               | Description
 --------------- | ---------------------- | ------------
+-Pn | nmap -Pn 192.168.1.1 | Doesn't bother pinging the host before scanning it. This means that Nmap will always treat the target host(s) as being alive, effectively bypassing the ICMP block
 -f	| nmap 192.168.1.1 -f	| Requested scan (including ping scans) use tiny fragmented IP packets. Harder for packet filters
 –mtu	| nmap 192.168.1.1 –mtu 32	| Set your own offset size
 -D	| nmap -D 192.168.1.101,192.168.1.102,192.168.1.103,192.168.1.23 192.168.1.1	| Send scans from spoofed IPs
