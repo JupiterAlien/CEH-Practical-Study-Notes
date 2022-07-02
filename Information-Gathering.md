@@ -26,7 +26,7 @@ Tool | Resource
 Nmap |
 Wappalyzer |
 WhatWeb |
-BUiltWith |
+BuiltWith |
 Netcat |
 
 #### Data breaches
