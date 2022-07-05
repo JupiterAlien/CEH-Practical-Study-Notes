@@ -17,8 +17,7 @@ dig HOST ns | dig google.com ns | Lookup for an ns record
 dig HOST a | dig google.com a | Lookup for an a record
 dig HOST mx | dig google.com mx | Lookup for an mx record
 dig HOST txt | dig google.com txt | Lookup for an txt record
-dig +trace <TargetDomain> | dig +trace google.com  
-dig +trace -x 173.252.120.6 | Lookup with trace
+dig +trace <TargetDomain> | dig +trace google.com OR dig +trace -x 173.252.120.6 | Lookup with trace
   
   
  
