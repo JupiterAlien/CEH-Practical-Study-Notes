@@ -66,7 +66,7 @@ http.request
 ### Filter all http get requests and responses
 http.request or http.response
 
-###Filter three way handshake
+### Filter three way handshake
 tcp.flags.syn==1 or (tcp.seq==1 and tcp.ack==1 and tcp.len==0 and tcp.analysis.initial_rtt)
 
 ### Find files by type
