@@ -7,10 +7,7 @@
 **Display Filters**: This type of filter is used to investigate packets by reducing the number of visible packets, and it is changeable during the capture. 
 
 
-
-
-
-Capture Filter Syntax
+#### Capture Filter Syntax
 
 These filters use byte offsets hex values and masks with boolean operators, and it is not easy to understand/predict the filter's purpose at first glance. The base syntax is explained below:
 
