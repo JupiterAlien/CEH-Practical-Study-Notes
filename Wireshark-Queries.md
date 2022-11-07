@@ -15,3 +15,10 @@ These filters use byte offsets hex values and masks with boolean operators, and 
     Direction: src, dst, src or dst, src and dst,
     Protocol: ether, wlan, ip, ip6, arp, rarp, tcp and udp.
     Sample filter to capture port 80 traffic: tcp port 80
+
+#### Comparison Operators
+
+
+Name | Syntax | Description | Example
+-----|--------|-------------|--------
+eq| == | Equal | ip.src == 10.10.10.100
