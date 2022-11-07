@@ -21,4 +21,7 @@ These filters use byte offsets hex values and masks with boolean operators, and 
 
 Name | Syntax | Description | Example
 -----|--------|-------------|--------
-eq| == | Equal | ip.src == 10.10.10.100
+eq| == | Equal | ip.src == 192.169.10.100
+ne | != | Not equal | ip.src != 10.10.10.100
+gt | > | Greater than | ip.ttl > 250
+lt | < | Less than | ip.ttl < 10
