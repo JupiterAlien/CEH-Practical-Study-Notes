@@ -1,6 +1,9 @@
 ## Useful queries when analyzing packets in Wireshark
 
 
+Wireshark documentation: https://www.wireshark.org/docs/dfref/d/dns.html
+
+
 **Capture Filters**: This type of filter is used to save only a specific part of the traffic. It is set before capturing traffic and not changeable during the capture. 
 
 
