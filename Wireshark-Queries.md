@@ -29,6 +29,15 @@ ge | >= | Greater or equal than | ip.ttl >= 0xFA
 le | <= | Less or equal than | ip.ttl <= 0xA
 
 
+#### Logical Operators
+
+Name | Syntax | Description | Example
+-----|--------|-------------|--------
+and | && | Logical AND | (ip.src == 10.10.10.100) AND (ip.src == 10.10.10.111)
+or | || | Logical OR | (ip.src == 10.10.10.100) OR (ip.src == 10.10.10.111)
+not | ! | Logical NOT | !(ip.src == 10.10.10.222)
+
+
 ### Exclude IP address: remove traffic from and to IP address
 !ip.addr ==192.168.0.1
 
